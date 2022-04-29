@@ -8,6 +8,7 @@ import os
 def crear_archivo():
     try:
         archivo = str(input("[+] Ingrese el nombre del archivo[archivo.md]: "))
+        assert len(archivo) < 0, "Ingrese algo"
         if archivo != "":
             os.system(f"touch {archivo}.md")
             print("[!] Archivo creado...")
