@@ -8,7 +8,6 @@ import os
 def crear_archivo():
     try:
         archivo = str(input("[+] Ingrese el nombre del archivo[archivo.md]: "))
-        assert len(archivo) < 0, f"Use {__file__} nombre del archivo Ej: README"
         if archivo != "":
             os.system(f"touch {archivo}.md")
             print("[!] Archivo creado...")
@@ -17,7 +16,7 @@ def crear_archivo():
             exit()
     except KeyboardInterrupt:
         print("\n[!]Saliendo...")
-        exit()
+        exit(1)
 
 
 def main():
